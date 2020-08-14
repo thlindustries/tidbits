@@ -69,8 +69,8 @@ export const StyledCarousel = styled(Carousel)`
   flex-direction: column;
   align-items: center;
 
-  width: 420px;
-  height: 420px;
+  width: 620px;
+  height: 500px;
 
   li {
     background: transparent !important;
