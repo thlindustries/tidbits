@@ -66,7 +66,7 @@ export const Tabs = styled.div`
 
   @media (max-width: 700px) {
     p {
-      font-size: 10px;
+      font-size: 12px;
       margin-right: 10px;
     }
   }

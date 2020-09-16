@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-scroll';
 
 import LogoHorizontal from '../../assets/logo-horizontal-tidibits.png';
