@@ -153,6 +153,7 @@ export const Presentation = styled.div`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   margin-left: 32px;
 
