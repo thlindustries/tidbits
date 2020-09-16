@@ -157,7 +157,6 @@ export const Presentation = styled.div`
 
   @media (max-width: 700px) {
     font-size: 10px;
-    margin-left: 18px;
     margin-bottom: 10%;
   }
 `;
