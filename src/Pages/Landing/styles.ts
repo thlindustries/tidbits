@@ -155,8 +155,6 @@ export const Presentation = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-left: 32px;
-
   @media (max-width: 700px) {
     font-size: 10px;
     margin-left: 18px;
