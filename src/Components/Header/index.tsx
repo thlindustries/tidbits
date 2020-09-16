@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useCallback, useEffect, useRef } from 'react';
 import { Link } from 'react-scroll';
+
+import LogoHorizontal from '../../assets/logo-horizontal-tidibits.png';
 
 import { Container, Tabs } from './styles';
 
 const Header: React.FC = () => {
   return (
     <Container>
-      <p>Aqui vai a logo</p>
+      {/* <p>Aqui vai a logo</p> */}
+      <img src={LogoHorizontal} alt="Horizontal logo" />
       <Tabs>
         <Link to="home" smooth>
           <p>Home</p>
