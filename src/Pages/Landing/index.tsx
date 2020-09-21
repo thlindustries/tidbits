@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
+import FoodMenu from '../../Components/FoodMenu';
 
 import {
   Container,
@@ -34,7 +36,7 @@ const Landing: React.FC = () => {
     <>
       <Header />
       <Container>
-        <Section>
+        <Section className="first-section">
           <TextContainer>
             <MainText>
               Não deixe para amanhã o que você pode comer{' '}
@@ -72,7 +74,7 @@ const Landing: React.FC = () => {
             </StyledCarousel>
           </CarouselWrapper>
         </Section>
-        <Section>
+        <Section className="second-section">
           <PresentationContainer>
             <ImgSegundoCard
               src="https://uploads.metropoles.com/wp-content/uploads/2020/06/10165709/WhatsApp-Image-2020-06-10-at-16.51.33.jpg"
@@ -94,7 +96,7 @@ const Landing: React.FC = () => {
             </Presentation>
           </PresentationContainer>
         </Section>
-        <Section className="test">
+        <Section className="third-section">
           <MotivationContainer>
             <MotHeader>
               <MotTitle>Razão</MotTitle>
@@ -130,8 +132,12 @@ const Landing: React.FC = () => {
             </MotCards>
           </MotivationContainer>
         </Section>
-        <Section />
+        <Section className="fourth-section">
+          <FoodMenu />
+        </Section>
+        <Section className="fifth-section"></Section>
       </Container>
+      <Footer />
     </>
   );
 };

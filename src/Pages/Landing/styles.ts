@@ -253,7 +253,7 @@ export const MotCard = styled.div<MotCardProps>`
   justify-content: space-between;
 
   border-radius: 12px;
-  box-shadow: 0 0 8px #000;
+  box-shadow: 1px 2px 6px #000;
 
   ${(props) =>
     props.bgColor &&
@@ -286,6 +286,13 @@ export const MotCard = styled.div<MotCardProps>`
     text-align: center;
 
     width: 65%;
+  }
+
+  transition: transform 0.8s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scaleY(1.09) scaleX(1.09);
   }
 
   @media (max-width: 700px) {
