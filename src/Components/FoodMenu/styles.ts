@@ -14,8 +14,6 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  border: solid 2px aquamarine;
-
   > p {
     color: #ffc757;
     font-family: 'Playball';
@@ -27,12 +25,30 @@ export const Container = styled.div`
     font-family: 'Pattaya';
     font-size: 26px;
   }
+
+  @media (max-width: 780px) {
+    padding: 12px;
+  }
 `;
 
 export const Menu = styled.div`
   display: flex;
   width: 80%;
   height: 100%;
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+
+    img {
+      width: 60%;
+    }
+  }
+  @media (max-width: 1530px) {
+    text-align: center;
+    img {
+      width: 60%;
+    }
+  }
 `;
 
 export const SideBar = styled.div`
@@ -42,9 +58,34 @@ export const SideBar = styled.div`
 
   width: 40%;
 
-  border: solid 2px aquamarine;
-
   padding: 16px;
+
+  @media (max-width: 780px) {
+    width: 100%;
+    flex-direction: row;
+
+    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+`;
+
+export const HorizontalRollContainer = styled.div`
+  @media (max-width: 780px) {
+    display: block;
+    display: flex;
+    flex-direction: row;
+
+    overflow-y: hidden;
+
+    width: 100%;
+    height: 50px;
+
+    flex-direction: row;
+
+    overflow: scroll;
+    overflow-y: hidden;
+  }
 `;
 
 export const TopicContainer = styled.div<TopicProps>`
@@ -88,11 +129,21 @@ export const TopicContainer = styled.div<TopicProps>`
     transform: scaleY(1.09) scaleX(1.09);
     color: #303030;
   }
+
+  @media (max-width: 780px) {
+    font-size: 12px;
+
+    & + div {
+      margin-top: 0;
+    }
+
+    div {
+      margin-top: 0;
+    }
+  }
 `;
 
 export const Items = styled.div`
-  border: solid 2px aquamarine;
-
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -100,6 +151,10 @@ export const Items = styled.div`
   overflow: hidden;
 
   width: 100%;
+
+  @media (max-width: 780px) {
+    height: 100%;
+  }
 `;
 
 export const Item = styled.div`
@@ -117,6 +172,11 @@ export const Item = styled.div`
   &:hover {
     cursor: pointer;
     transform: scaleY(1.09) scaleX(1.09);
+  }
+
+  @media (max-width: 780px) {
+    width: 30%;
+    height: 50%;
   }
 `;
 
@@ -153,5 +213,13 @@ export const ItemDescription = styled.div`
     font-family: 'Philosopher';
     font-size: 18px;
     color: #5e824f;
+  }
+
+  @media (max-width: 780px) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    height: 56%;
   }
 `;

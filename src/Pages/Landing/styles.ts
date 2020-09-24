@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.02);
 
   width: 100%;
   height: 500px;
@@ -27,7 +27,7 @@ export const Section = styled.section`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     padding: 0 40px;
     flex-direction: column-reverse;
     margin-top: 8px;
@@ -35,8 +35,14 @@ export const Section = styled.section`
 `;
 
 export const TextContainer = styled.div`
-  border: solid 1px #000;
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 32px;
+
     p {
       font-size: 24px;
       font-style: normal;
@@ -59,6 +65,10 @@ export const MainText = styled.p`
     color: #f95454;
     font-weight: bold;
   }
+
+  @media (max-width: 800px) {
+    font-size: 24px !important;
+  }
 `;
 export const Description = styled.p`
   width: 450px;
@@ -73,9 +83,9 @@ export const Description = styled.p`
     font-weight: bold;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     margin-top: 8px;
-    font-size: 18px;
+    font-size: 16px !important;
     width: 200px;
   }
 `;
@@ -83,13 +93,12 @@ export const Description = styled.p`
 export const CarouselWrapper = styled.div`
   width: 100%;
 
-  border: solid 1px #000;
   display: flex;
   justify-content: center;
 
   margin-left: 64px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     margin-left: 0px;
     width: 100%;
   }
@@ -113,8 +122,8 @@ export const StyledCarousel = styled(Carousel)`
     align-self: center;
   }
 
-  @media (max-width: 700px) {
-    width: 70%;
+  @media (max-width: 800px) {
+    width: 50%;
     height: 100%;
   }
 `;
@@ -123,14 +132,12 @@ export const PresentationContainer = styled.div`
   width: 100%;
   height: 100%;
 
-  border: solid 1px red;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 
   text-align: center;
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     justify-content: space-around;
   }
@@ -140,22 +147,19 @@ export const ImgSegundoCard = styled.img`
   width: 50%;
   height: 68%;
   border-radius: 12px;
-  border: solid 1px red;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     width: 50%;
     height: 30%;
   }
 `;
 
 export const Presentation = styled.div`
-  border: solid 1px red;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     font-size: 10px;
     margin-bottom: 10%;
   }
@@ -168,7 +172,7 @@ export const Title = styled.p`
 
   margin-bottom: 18px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     font-size: 24px;
   }
 `;
@@ -183,7 +187,7 @@ export const PresDescription = styled.p`
     color: #f95454;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     font-size: 18px;
   }
 
@@ -197,7 +201,7 @@ export const PresText = styled.p`
 
   width: 50%;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     font-size: 16px;
     width: 100%;
   }
@@ -216,8 +220,6 @@ export const MotHeader = styled.div`
   margin-bottom: 6%;
 
   width: 100%;
-
-  border: solid 1px blue;
 `;
 
 export const MotTitle = styled.h1`
@@ -241,7 +243,7 @@ export const MotCards = styled.div`
   flex-direction: row;
   justify-content: space-between;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: column;
   }
 `;
@@ -295,7 +297,7 @@ export const MotCard = styled.div<MotCardProps>`
     transform: scaleY(1.09) scaleX(1.09);
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -309,12 +311,32 @@ export const MotCard = styled.div<MotCardProps>`
       margin: 0;
     }
     img {
-      width: 20%;
+      width: 10%;
     }
     width: 100%;
     height: 100px;
     padding: 20px;
 
     margin-bottom: 10px;
+  }
+`;
+
+export const ComentsSection = styled.section`
+  background: rgba(0, 0, 0, 0.1);
+
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 0 240px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    padding: 0 40px;
+    flex-direction: column-reverse;
+    margin-top: 8px;
   }
 `;

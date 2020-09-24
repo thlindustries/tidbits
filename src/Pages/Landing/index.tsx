@@ -3,6 +3,7 @@ import React from 'react';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
 import FoodMenu from '../../Components/FoodMenu';
+import Coments from '../../Components/Coments';
 
 import {
   Container,
@@ -24,6 +25,7 @@ import {
   MotDescription,
   MotCards,
   MotCard,
+  ComentsSection,
 } from './styles';
 
 import foodImg from '../../assets/food.png';
@@ -135,7 +137,9 @@ const Landing: React.FC = () => {
         <Section className="fourth-section">
           <FoodMenu />
         </Section>
-        <Section className="fifth-section"></Section>
+        <ComentsSection className="fifth-section">
+          <Coments />
+        </ComentsSection>
       </Container>
       <Footer />
     </>

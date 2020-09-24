@@ -45,8 +45,6 @@ export const Tabs = styled.div`
   height: 30px;
   margin-left: auto;
 
-  border: solid 1px red;
-
   p {
     margin-right: 64px;
     /* margin-right: 48; */

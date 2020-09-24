@@ -9,6 +9,10 @@ export const Container = styled.div`
   padding: 24px 64px 0 64px;
 
   background: rgba(170, 173, 168, 0.5);
+
+  @media (max-width: 800px) {
+    height: auto;
+  }
 `;
 
 export const InfoContainer = styled.div`
@@ -17,11 +21,14 @@ export const InfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+    flex-direction: column;
+  }
 `;
 
 export const Info = styled.div`
-  border: solid 2px aquamarine;
-
   width: 20%;
 
   h3 {
@@ -40,6 +47,11 @@ export const Info = styled.div`
 
   svg {
     margin-right: 24px;
+  }
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-bottom: 12px;
   }
 `;
 
