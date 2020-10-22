@@ -36,7 +36,8 @@ import qualityIcon from '../../assets/quality.svg';
 const Landing: React.FC = () => {
   return (
     <>
-      <Header />
+      <p>oi</p>
+      {/* <Header />
       <Container>
         <Section className="first-section">
           <TextContainer>
@@ -141,7 +142,7 @@ const Landing: React.FC = () => {
           <Coments />
         </ComentsSection>
       </Container>
-      <Footer />
+      <Footer /> */}
     </>
   );
 };
