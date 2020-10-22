@@ -36,7 +36,7 @@ import qualityIcon from '../../assets/quality.svg';
 const Landing: React.FC = () => {
   return (
     <>
-      <p>oi</p>
+      <p>Site fora do ar por tempo indeterminado</p>
       {/* <Header />
       <Container>
         <Section className="first-section">
