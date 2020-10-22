@@ -1,37 +1,37 @@
 import React from 'react';
 
-import Header from '../../Components/Header';
-import Footer from '../../Components/Footer';
-import FoodMenu from '../../Components/FoodMenu';
-import Coments from '../../Components/Coments';
+// import Header from '../../Components/Header';
+// import Footer from '../../Components/Footer';
+// import FoodMenu from '../../Components/FoodMenu';
+// import Coments from '../../Components/Coments';
 
-import {
-  Container,
-  Section,
-  MainText,
-  Description,
-  TextContainer,
-  CarouselWrapper,
-  StyledCarousel,
-  PresentationContainer,
-  Presentation,
-  ImgSegundoCard,
-  Title,
-  PresDescription,
-  PresText,
-  MotivationContainer,
-  MotHeader,
-  MotTitle,
-  MotDescription,
-  MotCards,
-  MotCard,
-  ComentsSection,
-} from './styles';
+// import {
+//   Container,
+//   Section,
+//   MainText,
+//   Description,
+//   TextContainer,
+//   CarouselWrapper,
+//   StyledCarousel,
+//   PresentationContainer,
+//   Presentation,
+//   ImgSegundoCard,
+//   Title,
+//   PresDescription,
+//   PresText,
+//   MotivationContainer,
+//   MotHeader,
+//   MotTitle,
+//   MotDescription,
+//   MotCards,
+//   MotCard,
+//   ComentsSection,
+// } from './styles';
 
-import foodImg from '../../assets/food.png';
-import menuIcon from '../../assets/menu.svg';
-import foodIcon from '../../assets/group.svg';
-import qualityIcon from '../../assets/quality.svg';
+// import foodImg from '../../assets/food.png';
+// import menuIcon from '../../assets/menu.svg';
+// import foodIcon from '../../assets/group.svg';
+// import qualityIcon from '../../assets/quality.svg';
 
 const Landing: React.FC = () => {
   return (
