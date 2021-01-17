@@ -1,6 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
+
+  @media(max-width: 830px){
+    body{
+      min-width: 726px;
+    }
+  }
   *{
     margin:0;
     padding: 0;

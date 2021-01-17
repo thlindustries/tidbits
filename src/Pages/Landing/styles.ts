@@ -9,7 +9,49 @@ interface MotCardProps {
 
 export const Container = styled.div`
   > section {
-    margin-top: 64px;
+    /* margin-top: 64px; */
+  }
+
+  .first-section,
+  .second-section,
+  .fourth-section {
+    transition: 0.4s;
+  }
+
+  .first-section {
+    position: relative;
+    overflow: hidden;
+    justify-content: center;
+    video {
+      width: 100%;
+      height: 1100px;
+    }
+    padding: 0;
+    .video-text {
+      position: absolute;
+      color: #fff;
+      font-size: 64px;
+    }
+    @media (max-width: 780px) {
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .second-section {
+    padding: 0 60px;
+  }
+
+  .fourth-section {
+    height: 600px;
+    padding: 0 60px;
+
+    @media (max-width: 780px) {
+      height: 500px;
+    }
   }
 `;
 
@@ -18,8 +60,6 @@ export const Section = styled.section`
 
   width: 100%;
   height: 500px;
-
-  margin-top: 18px;
 
   padding: 0 240px;
 
@@ -132,6 +172,7 @@ export const PresentationContainer = styled.div`
   width: 100%;
   height: 100%;
 
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,13 +185,13 @@ export const PresentationContainer = styled.div`
 `;
 
 export const ImgSegundoCard = styled.img`
-  width: 50%;
-  height: 68%;
+  width: 595px;
+  height: 58%;
   border-radius: 12px;
 
   @media (max-width: 800px) {
-    width: 50%;
-    height: 30%;
+    width: 360px;
+    height: 180px;
   }
 `;
 
@@ -158,6 +199,9 @@ export const Presentation = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
+  min-width: 550px;
 
   @media (max-width: 800px) {
     font-size: 10px;
@@ -198,6 +242,7 @@ export const PresText = styled.p`
   color: #363636;
   font-family: 'Pompiere';
   font-size: 20px;
+  text-align: justify;
 
   width: 50%;
 
@@ -217,7 +262,7 @@ export const MotHeader = styled.div`
   align-items: center;
   text-align: center;
 
-  margin-bottom: 6%;
+  margin-bottom: 2%;
 
   width: 100%;
 `;
@@ -235,7 +280,7 @@ export const MotDescription = styled.p`
   color: #000;
 
   font-size: 24px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 `;
 
 export const MotCards = styled.div`
@@ -252,10 +297,15 @@ export const MotCard = styled.div<MotCardProps>`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 
   border-radius: 12px;
   box-shadow: 1px 2px 6px #000;
+
+  overflow-x: none;
+
+  min-width: 280px;
+  margin-right: 12px;
 
   ${(props) =>
     props.bgColor &&
@@ -263,12 +313,12 @@ export const MotCard = styled.div<MotCardProps>`
       background: ${props.bgColor};
     `}
 
-  width: 25%;
-  height: 280px;
+  width: 28%;
+  height: 340px;
   padding: 20px;
 
   h1 {
-    font-family: 'Pattaya';
+    font-family: 'Fraunces', serif;
     color: #414141;
     font-size: 24px;
 
@@ -280,14 +330,13 @@ export const MotCard = styled.div<MotCardProps>`
   }
 
   p {
-    margin-bottom: 10%;
-
     font-family: 'Oregano';
     color: #737373;
-    font-size: 20px;
-    text-align: center;
+    font-size: 18px;
+    text-align: justify;
 
-    width: 65%;
+    width: 85%;
+    margin-bottom: auto;
   }
 
   transition: transform 0.8s;
@@ -295,6 +344,10 @@ export const MotCard = styled.div<MotCardProps>`
   &:hover {
     cursor: pointer;
     transform: scaleY(1.09) scaleX(1.09);
+  }
+
+  @media (max-width: 290px) {
+    overflow-y: scroll;
   }
 
   @media (max-width: 800px) {
@@ -326,9 +379,9 @@ export const ComentsSection = styled.section`
 
   width: 100%;
 
-  margin-top: 18px;
+  /* margin-top: 18px; */
 
-  padding: 0 240px;
+  padding: 0 180px;
 
   display: flex;
   justify-content: space-between;

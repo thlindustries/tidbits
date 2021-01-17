@@ -59,13 +59,13 @@ export const SideBar = styled.div`
   width: 40%;
 
   padding: 16px;
+  min-width: 236px;
 
   @media (max-width: 780px) {
     width: 100%;
     flex-direction: row;
 
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow-x: scroll;
     overflow-y: hidden;
   }
 `;
@@ -76,15 +76,10 @@ export const HorizontalRollContainer = styled.div`
     display: flex;
     flex-direction: row;
 
-    overflow-y: hidden;
-
     width: 100%;
     height: 50px;
 
     flex-direction: row;
-
-    overflow: scroll;
-    overflow-y: hidden;
   }
 `;
 
@@ -148,48 +143,45 @@ export const Items = styled.div`
   justify-content: space-around;
   align-items: center;
 
-  overflow: hidden;
-
   width: 100%;
 
-  @media (max-width: 780px) {
-    height: 100%;
+  transition: transform 0.8s, height 0.4s;
+
+  img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 6px;
   }
-`;
-
-export const Item = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  border-radius: 12px;
-  box-shadow: 0 0 4px #000;
-
-  width: 20%;
-  height: 60%;
-
-  transition: transform 0.8s;
 
   &:hover {
     cursor: pointer;
     transform: scaleY(1.09) scaleX(1.09);
   }
-
   @media (max-width: 780px) {
-    width: 30%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 50%;
   }
 `;
 
 export const ImgContainer = styled.div`
-  background: #edfde6;
   width: 100%;
-  height: 80%;
+  height: 100%;
 
   border-radius: 12px 12px 0 0;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin-right: auto;
+
+  @media (max-width: 780px) {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 export const ItemDescription = styled.div`

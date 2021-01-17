@@ -1,46 +1,38 @@
 import React from 'react';
 
-// import Header from '../../Components/Header';
-// import Footer from '../../Components/Footer';
-// import FoodMenu from '../../Components/FoodMenu';
-// import Coments from '../../Components/Coments';
+import video2 from 'assets/SITE/video2.mp4';
+import logo from 'assets/SITE/logo_complete.png';
 
-// import {
-//   Container,
-//   Section,
-//   MainText,
-//   Description,
-//   TextContainer,
-//   CarouselWrapper,
-//   StyledCarousel,
-//   PresentationContainer,
-//   Presentation,
-//   ImgSegundoCard,
-//   Title,
-//   PresDescription,
-//   PresText,
-//   MotivationContainer,
-//   MotHeader,
-//   MotTitle,
-//   MotDescription,
-//   MotCards,
-//   MotCard,
-//   ComentsSection,
-// } from './styles';
+import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
+import FoodMenu from '../../Components/FoodMenu';
+import Coments from '../../Components/Coments';
 
-// import foodImg from '../../assets/food.png';
-// import menuIcon from '../../assets/menu.svg';
-// import foodIcon from '../../assets/group.svg';
-// import qualityIcon from '../../assets/quality.svg';
+import {
+  Container,
+  Section,
+  PresentationContainer,
+  Presentation,
+  ImgSegundoCard,
+  Title,
+  PresDescription,
+  PresText,
+  MotivationContainer,
+  MotHeader,
+  MotTitle,
+  MotCards,
+  MotCard,
+  ComentsSection,
+} from './styles';
 
 const Landing: React.FC = () => {
   return (
     <>
-      <p>Site fora do ar por tempo indeterminado</p>
-      {/* <Header />
+      {/* <p>Site fora do ar por tempo indeterminado</p> */}
+      <Header />
       <Container>
         <Section className="first-section">
-          <TextContainer>
+          {/* <TextContainer>
             <MainText>
               Não deixe para amanhã o que você pode comer{' '}
               <strong>HOJE !</strong>
@@ -49,8 +41,13 @@ const Landing: React.FC = () => {
               Experimente a comida caseira mais gostosa de{' '}
               <strong>Campinas</strong> feita com muito amor e carinho!
             </Description>
-          </TextContainer>
-          <CarouselWrapper>
+          </TextContainer> */}
+          <p className="video-text">We start with why</p>
+
+          <video autoPlay muted loop id="myVideo">
+            <source src={video2} type="video/mp4" />
+          </video>
+          {/* <CarouselWrapper>
             <StyledCarousel
               infiniteLoop
               autoPlay
@@ -75,26 +72,24 @@ const Landing: React.FC = () => {
                 <p className="legend">Comida caseira</p>
               </div>
             </StyledCarousel>
-          </CarouselWrapper>
+          </CarouselWrapper> */}
         </Section>
         <Section className="second-section">
           <PresentationContainer>
-            <ImgSegundoCard
-              src="https://uploads.metropoles.com/wp-content/uploads/2020/06/10165709/WhatsApp-Image-2020-06-10-at-16.51.33.jpg"
-              alt="Segundo card"
-            />
+            <ImgSegundoCard src={logo} alt="Segundo card" />
             <Presentation>
-              <Title>Bem vindo</Title>
+              <Title>Quem somos</Title>
               <PresDescription>
                 Bem vindo ao restaurante <strong>tidbits</strong>
               </PresDescription>
               <PresText>
-                Uma rápida apresentação, uma rápida apresentação, uma rápida
-                apresentação uma rápida apresentação uma rápida apresentação uma
-                rápida apresentação, uma rápida. Apresentação, uma rápida
-                apresentação uma rápida apresentação uma rápida apresentação uma
-                rápida apresentação, uma rápida apresentação uma rápida
-                apresentação.{' '}
+                Somos uma agência de marketing que oferece soluções completas
+                para empresas e para criadores de conteúdo. Especialistas em
+                construir histórias e entregar resultados, queremos fazer parte
+                da realização do seu sonho. Aqui cada cliente é único. Cada
+                trabalho é personalizado. Um grupo que pensa, fala e respira a
+                comunicação. Mais do que comunicadores, somos uma equipe de
+                criativos.{' '}
               </PresText>
             </Presentation>
           </PresentationContainer>
@@ -102,34 +97,39 @@ const Landing: React.FC = () => {
         <Section className="third-section">
           <MotivationContainer>
             <MotHeader>
-              <MotTitle>Razão</MotTitle>
-              <MotDescription>
-                Por quê escolher nosso restaurante?
-              </MotDescription>
+              <MotTitle>Nossos serviços</MotTitle>
+              {/* <MotDescription>
+                Por nos escolher?
+              </MotDescription> */}
             </MotHeader>
             <MotCards>
               <MotCard bgColor="#E5ECE2">
-                <img src={menuIcon} alt="" />
-                <h1>Um cardapio delicioso</h1>
+                <h1>Gestão des redes sociais</h1>
                 <p>
-                  Um texto de exemplo para exemplo texto de exemplo para exemplo
-                  texto
+                  Hoje, as decisões de compra são tomadas mediante a muita
+                  pesquisa. É avaliado o posicionamento, sua presença nas redes
+                  sociais, a forma com que se comunica. Quanto mais atributos a
+                  marca cumprir, melhor será posicionada. Te colocamos no mapa
+                  de forma assertiva trazendo um melhor resultado para a
+                  empresa.
                 </p>
               </MotCard>
               <MotCard bgColor="#EDFDE6">
-                <img src={foodIcon} alt="" />
-                <h1>Uma pitada de amor</h1>
+                <h1>Acessoria completa </h1>
                 <p>
-                  Um texto de exemplo para exemplo texto de exemplo para exemplo
-                  texto
+                  A rede social é lugar de se mostrar e de ganhar dinheiro. Com
+                  a assessoria completa te ajudamos a mostrar o seu diferencial
+                  para milhares de pessoas e atingir ótimos resultados.
                 </p>
               </MotCard>
               <MotCard bgColor="#E5ECE2">
-                <img src={qualityIcon} alt="" />
-                <h1>Qualidade garantida</h1>
+                <h1>Mentoria</h1>
                 <p>
-                  Um texto de exemplo para exemplo texto de exemplo para exemplo
-                  texto
+                  Sonha em se tornar um criador de conteúdo mas não sabe por
+                  onde começar? Está precisando se profissionalizar mas não sabe
+                  como? Quer aprender a monetizar suas redes sociais? Através
+                  das nossas metodologias e ferramentas, te ajudamos a dar os
+                  primeiros passos a alcançar seus sonhos e objetivos.
                 </p>
               </MotCard>
             </MotCards>
@@ -142,7 +142,7 @@ const Landing: React.FC = () => {
           <Coments />
         </ComentsSection>
       </Container>
-      <Footer /> */}
+      <Footer />
     </>
   );
 };

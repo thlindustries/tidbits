@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.18);
   border-radius: 0 0 8px 8px;
 
   width: 100%;
-  height: 150px;
+  height: 120px;
 
   display: flex;
   align-items: center;
@@ -21,8 +21,15 @@ export const Container = styled.div`
   }
 
   img {
-    width: 260px;
+    width: 160px;
     height: 80px;
+
+    transition: 0.4s;
+
+    &:hover {
+      transform: scaleX(1.08) scaleY(1.08);
+      cursor: pointer;
+    }
   }
 
   @media (max-width: 700px) {
@@ -31,11 +38,6 @@ export const Container = styled.div`
 
     p {
       font-size: 18px;
-    }
-
-    img {
-      width: 120px;
-      height: 40px;
     }
   }
 `;

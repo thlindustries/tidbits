@@ -1,5 +1,14 @@
 import React, { useState, useCallback } from 'react';
-import frango from '../../assets/frangoassado.png';
+
+import port1 from 'assets/SITE/port1.jpeg';
+import port2 from 'assets/SITE/port2.jpg';
+import port3 from 'assets/SITE/port3.png';
+import port4 from 'assets/SITE/port4.png';
+import port5 from 'assets/SITE/port5.png';
+import port6 from 'assets/SITE/port6.png';
+import port7 from 'assets/SITE/port7.png';
+import port8 from 'assets/SITE/port8.jpeg';
+import port9 from 'assets/SITE/port9.jpg';
 
 import {
   Container,
@@ -8,98 +17,117 @@ import {
   HorizontalRollContainer,
   TopicContainer,
   Items,
-  Item,
   ImgContainer,
-  ItemDescription,
 } from './styles';
 
 const FoodMenu: React.FC = () => {
-  const [selectedItem, setSelectedItem] = useState('almoco');
+  const [selectedItem, setSelectedItem] = useState('gabriel-rovatti');
 
   const handleSelectItem = useCallback((topic: string) => {
     setSelectedItem(topic);
   }, []);
 
+  const handleChangeBanner = useCallback(() => {
+    switch (selectedItem) {
+      case 'gabriel-rovatti':
+        return <img src={port1} alt="" />;
+      case 'full-eletronics':
+        return <img src={port2} alt="" />;
+      case 'debora-borges':
+        return <img src={port3} alt="" />;
+      case 'tidbits':
+        return <img src={port4} alt="" />;
+      case 'favo-mel':
+        return <img src={port5} alt="" />;
+      case 'kaulike':
+        return <img src={port7} alt="" />;
+      case 'cibele-lorente':
+        return <img src={port8} alt="" />;
+      case 'charles-lapin':
+        return <img src={port9} alt="" />;
+
+      case 'grao-salutte':
+        return <img src={port6} alt="" />;
+      default:
+        break;
+    }
+  }, [selectedItem]);
+
   return (
     <Container>
       <p>Navegar</p>
-      <h3>Explore nosso menu</h3>
+      <h3>Explore nosso porifólio</h3>
 
       <Menu>
         <SideBar>
           <HorizontalRollContainer>
             <TopicContainer
-              selected={selectedItem === 'almoco'}
-              onClick={() => handleSelectItem('almoco')}
+              selected={selectedItem === 'gabriel-rovatti'}
+              onClick={() => handleSelectItem('gabriel-rovatti')}
             >
               <div />
-              <p>Almoço</p>
+              <p>Gabriel Rovatti</p>
             </TopicContainer>
             <TopicContainer
-              selected={selectedItem === 'lanches'}
-              onClick={() => handleSelectItem('lanches')}
+              selected={selectedItem === 'full-eletronics'}
+              onClick={() => handleSelectItem('full-eletronics')}
             >
               <div />
-              <p>Lanches</p>
+              <p>Full Eletronics</p>
             </TopicContainer>
             <TopicContainer
-              selected={selectedItem === 'jantar'}
-              onClick={() => handleSelectItem('jantar')}
+              selected={selectedItem === 'debora-borges'}
+              onClick={() => handleSelectItem('debora-borges')}
             >
               <div />
-              <p>Jantar</p>
+              <p>Dra. Debora Borges</p>
             </TopicContainer>
             <TopicContainer
-              selected={selectedItem === 'sobremesas'}
-              onClick={() => handleSelectItem('sobremesas')}
+              selected={selectedItem === 'tidbits'}
+              onClick={() => handleSelectItem('tidbits')}
             >
               <div />
-              <p>Sobremesas</p>
+              <p>Tidbits</p>
             </TopicContainer>
             <TopicContainer
-              selected={selectedItem === 'sopas'}
-              onClick={() => handleSelectItem('sopas')}
+              selected={selectedItem === 'favo-mel'}
+              onClick={() => handleSelectItem('favo-mel')}
             >
               <div />
-              <p>Sopas</p>
+              <p>Favo de Mel</p>
             </TopicContainer>
             <TopicContainer
-              selected={selectedItem === 'bebidas'}
-              onClick={() => handleSelectItem('bebidas')}
+              selected={selectedItem === 'kaulike'}
+              onClick={() => handleSelectItem('kaulike')}
             >
               <div />
-              <p>Bebidas</p>
+              <p>Kaulike</p>
+            </TopicContainer>
+            <TopicContainer
+              selected={selectedItem === 'cibele-lorente'}
+              onClick={() => handleSelectItem('cibele-lorente')}
+            >
+              <div />
+              <p>Cibele Lorente</p>
+            </TopicContainer>
+            <TopicContainer
+              selected={selectedItem === 'charles-lapin'}
+              onClick={() => handleSelectItem('charles-lapin')}
+            >
+              <div />
+              <p>Charles Lapin</p>
+            </TopicContainer>
+            <TopicContainer
+              selected={selectedItem === 'grao-salutte'}
+              onClick={() => handleSelectItem('grao-salutte')}
+            >
+              <div />
+              <p>Grão Salutte</p>
             </TopicContainer>
           </HorizontalRollContainer>
         </SideBar>
         <Items>
-          <Item>
-            <ImgContainer>
-              <img src={frango} alt="" />
-            </ImgContainer>
-            <ItemDescription>
-              <p>Frango assado</p>
-              <strong>R$15,00</strong>
-            </ItemDescription>
-          </Item>
-          <Item>
-            <ImgContainer>
-              <img src={frango} alt="" />
-            </ImgContainer>
-            <ItemDescription>
-              <p>Frango assado</p>
-              <strong>R$15,00</strong>
-            </ItemDescription>
-          </Item>
-          <Item>
-            <ImgContainer>
-              <img src={frango} alt="" />
-            </ImgContainer>
-            <ItemDescription>
-              <p>Frango assado</p>
-              <strong>R$15,00</strong>
-            </ItemDescription>
-          </Item>
+          <ImgContainer>{handleChangeBanner()}</ImgContainer>
         </Items>
       </Menu>
     </Container>

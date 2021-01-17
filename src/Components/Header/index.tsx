@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-scroll';
 
-import LogoHorizontal from '../../assets/logo-horizontal-tidibits.png';
+import LogoHorizontal from 'assets/SITE/logo_complete.png';
 
 import { Container, Tabs } from './styles';
 
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
         <Link to="home" smooth>
           <p>Home</p>
         </Link>
-        <Link to="cotacao" smooth>
+        {/* <Link to="cotacao" smooth>
           <p>Cotação</p>
         </Link>
         <Link to="contato" smooth>
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
         </Link>
         <Link to="encontre" smooth>
           <p>Encontre-nos</p>
-        </Link>
+        </Link> */}
       </Tabs>
     </Container>
   );
