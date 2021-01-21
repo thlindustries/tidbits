@@ -1,27 +1,61 @@
-import React from 'react';
-import { FiFacebook, FiInstagram, FiTwitter } from 'react-icons/fi';
+import React, { useCallback } from 'react';
 
-import { Container, InfoContainer, Info, SocialContainer } from './styles';
+import facebook from 'assets/icons/facebook.png';
+import instagram from 'assets/icons/instagram.png';
+import twitter from 'assets/icons/twitter.png';
+import logo from 'assets/SITE/logo_complete.png';
+
+import {
+  Container,
+  InfoContainer,
+  Info,
+  SocialContainer,
+  StyledIcon,
+} from './styles';
 
 const Footer: React.FC = () => {
+  const openSocialMedia = useCallback((socialMediaName: string) => {
+    switch (socialMediaName) {
+      case 'insta':
+        window.open('https://www.instagram.com/you.becomunicacao/');
+        break;
+      default:
+        break;
+    }
+  }, []);
   return (
     <Container>
       <InfoContainer>
         <Info>
-          <h3>Logo</h3>
+          <StyledIcon className="logo" src={logo} />
           <p>Acompanhe-nos em nossas redes sociais.</p>
           <SocialContainer>
-            <FiFacebook size={40} />
-            <FiInstagram size={40} />
-            <FiTwitter size={40} />
+            <StyledIcon
+              src={facebook}
+              alt="facebook"
+              onClick={() => openSocialMedia('insta')}
+            />
+            <StyledIcon
+              src={instagram}
+              alt="instagram"
+              onClick={() => openSocialMedia('insta')}
+            />
+            <StyledIcon
+              src={twitter}
+              alt="twitter"
+              onClick={() => openSocialMedia('insta')}
+            />
+            {/* <FiFacebook size={40} onClick={() => openSocialMedia('insta')} />
+            <FiInstagram size={40} onClick={() => openSocialMedia('insta')} />
+            <FiTwitter size={40} onClick={() => openSocialMedia('insta')} /> */}
           </SocialContainer>
         </Info>
-        <Info>
+        {/* <Info>
           <h3>Nosso menu</h3>
           <p>Almoço</p>
           <p>Jantar</p>
           <p>Lanches</p>
-        </Info>
+        </Info> */}
         <Info>
           <h3>Links</h3>
           <p>Sobre nós</p>
@@ -29,8 +63,8 @@ const Footer: React.FC = () => {
         </Info>
         <Info>
           <h3>Contato</h3>
-          <p>(19) 99999-9999</p>
-          <p>olá@restaurante.com</p>
+          <p>(19) 99699-4422</p>
+          {/* <p>olá@restaurante.com</p> */}
           <p>Campinas, SP</p>
         </Info>
       </InfoContainer>

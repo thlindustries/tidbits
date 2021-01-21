@@ -8,7 +8,12 @@ export const Container = styled.div`
 
   padding: 24px 64px 0 64px;
 
-  background: rgba(170, 173, 168, 0.5);
+  background: #fff;
+
+  .logo {
+    width: 80px !important;
+    height: 40px;
+  }
 
   @media (max-width: 800px) {
     height: auto;
@@ -59,4 +64,15 @@ export const SocialContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+`;
+
+export const StyledIcon = styled.img`
+  width: 12%;
+
+  transition: 0.4s;
+
+  &:hover {
+    transform: scaleX(1.18) scaleY(1.18);
+    cursor: pointer;
+  }
 `;
