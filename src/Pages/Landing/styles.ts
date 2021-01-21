@@ -44,11 +44,13 @@ export const Container = styled.div`
 
   .second-section {
     padding: 0 60px;
+    background: rgba(0, 0, 0, 0.1);
   }
 
   .fourth-section {
     height: 600px;
     padding: 0 60px;
+    background: rgba(0, 0, 0, 0.1);
 
     @media (max-width: 780px) {
       height: 500px;
@@ -212,8 +214,9 @@ export const Presentation = styled.div`
 
 export const Title = styled.p`
   font-family: 'Playball';
-  color: #ffc757;
-  font-size: 24px;
+  color: #373435;
+  font-size: 32px;
+  border-bottom: 2px solid #ffffff;
 
   margin-bottom: 18px;
 
@@ -319,7 +322,7 @@ export const MotCard = styled.div<MotCardProps>`
   padding: 20px;
 
   h1 {
-    font-family: 'Fraunces', serif;
+    font-family: 'Playball', serif;
     color: #414141;
     font-size: 24px;
 

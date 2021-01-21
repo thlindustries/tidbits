@@ -5,7 +5,7 @@ import logo from 'assets/SITE/logo_complete.png';
 
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
-import FoodMenu from '../../Components/FoodMenu';
+import FoodMenu from '../../Components/PortifolioMenu';
 import Coments from '../../Components/Coments';
 
 import {
@@ -103,7 +103,7 @@ const Landing: React.FC = () => {
               </MotDescription> */}
             </MotHeader>
             <MotCards>
-              <MotCard bgColor="#E5ECE2">
+              <MotCard bgColor="#fffaf0">
                 <h1>Gestão des redes sociais</h1>
                 <p>
                   Hoje, as decisões de compra são tomadas mediante a muita
@@ -114,7 +114,7 @@ const Landing: React.FC = () => {
                   empresa.
                 </p>
               </MotCard>
-              <MotCard bgColor="#EDFDE6">
+              <MotCard bgColor="#ffeec7">
                 <h1>Acessoria completa </h1>
                 <p>
                   A rede social é lugar de se mostrar e de ganhar dinheiro. Com
@@ -122,7 +122,7 @@ const Landing: React.FC = () => {
                   para milhares de pessoas e atingir ótimos resultados.
                 </p>
               </MotCard>
-              <MotCard bgColor="#E5ECE2">
+              <MotCard bgColor="#fffaf0">
                 <h1>Mentoria</h1>
                 <p>
                   Sonha em se tornar um criador de conteúdo mas não sabe por

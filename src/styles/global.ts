@@ -28,7 +28,7 @@ export default createGlobalStyle`
 
     /* Handle */
     &::-webkit-scrollbar-thumb {
-      background: #869c7b;
+      background: #f4b946;
       border-radius: 12px;
 
       transition: background-color 0.2s;
@@ -37,14 +37,14 @@ export default createGlobalStyle`
 
     /* Handle on hover */
     &::-webkit-scrollbar-thumb:hover {
-      background: #56634f;
+      background: #f4d287;
       width: 10px;
     }
 
   }
 
   body{
-    background: #F7FBF5;
+    background: #fff;
     color: #000;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
