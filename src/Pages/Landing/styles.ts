@@ -8,6 +8,7 @@ interface MotCardProps {
 }
 
 export const Container = styled.div`
+  position: relative;
   > section {
     /* margin-top: 64px; */
   }

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 4;
   background: #fff;
   border-radius: 0 0 8px 8px;
 
@@ -13,6 +16,7 @@ export const Container = styled.div`
 
   padding: 0 80px;
 
+  transition: 0.4s;
   > p {
     font-family: 'Fugaz One';
     font-size: 22px;

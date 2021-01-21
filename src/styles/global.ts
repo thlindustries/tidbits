@@ -62,4 +62,13 @@ export default createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  .on{
+    height: 60px;
+
+    img{
+      width: 110px;
+      height: 50px;
+    }
+  }
 `;
