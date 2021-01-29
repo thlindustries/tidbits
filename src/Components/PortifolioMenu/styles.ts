@@ -65,7 +65,7 @@ export const SideBar = styled.div`
     width: 100%;
     flex-direction: row;
 
-    overflow-x: scroll;
+    overflow-x: hidden;
     overflow-y: hidden;
   }
 `;
@@ -83,8 +83,13 @@ export const HorizontalRollContainer = styled.div`
 
     width: 100%;
     height: 50px;
+    p {
+      font-size: 14px !important;
+    }
 
     flex-direction: row;
+    overflow-y: hidden !important;
+    overflow-x: scroll !important;
   }
 `;
 
@@ -104,7 +109,7 @@ export const TopicContainer = styled.div<TopicProps>`
   }
   p {
     font-family: 'Philosopher';
-    font-size: 22px;
+    font-size: 20px;
   }
 
   ${(props) =>
