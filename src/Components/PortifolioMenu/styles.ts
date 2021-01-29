@@ -82,7 +82,7 @@ export const HorizontalRollContainer = styled.div`
     flex-direction: row;
 
     width: 100%;
-    height: 50px;
+    height: 60px;
     p {
       font-size: 14px !important;
     }
