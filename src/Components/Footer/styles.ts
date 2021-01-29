@@ -63,11 +63,14 @@ export const Info = styled.div`
 export const SocialContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+
+  img {
+    margin-right: 16px;
+  }
 `;
 
 export const StyledIcon = styled.img`
-  width: 12%;
+  width: 16%;
 
   transition: 0.4s;
 

@@ -71,6 +71,11 @@ export const SideBar = styled.div`
 `;
 
 export const HorizontalRollContainer = styled.div`
+  height: 400px;
+
+  overflow-x: hidden !important;
+  overflow: scroll;
+
   @media (max-width: 780px) {
     display: block;
     display: flex;

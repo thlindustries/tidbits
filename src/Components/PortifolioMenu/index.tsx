@@ -9,6 +9,9 @@ import port6 from 'assets/SITE/port6.png';
 import port7 from 'assets/SITE/port7.png';
 import port8 from 'assets/SITE/port8.jpeg';
 import port9 from 'assets/SITE/port9.jpg';
+import port10 from 'assets/SITE/port10.jpeg';
+import port11 from 'assets/SITE/port11.jpeg';
+import port12 from 'assets/SITE/port12.jpeg';
 
 import {
   Container,
@@ -30,24 +33,29 @@ const FoodMenu: React.FC = () => {
   const handleChangeBanner = useCallback(() => {
     switch (selectedItem) {
       case 'gabriel-rovatti':
-        return <img src={port1} alt="" />;
+        return <img src={port1} alt="gabriel-rovatti" />;
       case 'full-eletronics':
-        return <img src={port2} alt="" />;
+        return <img src={port2} alt="full-eletronics" />;
       case 'debora-borges':
-        return <img src={port3} alt="" />;
+        return <img src={port3} alt="debora-borges" />;
       case 'tidbits':
-        return <img src={port4} alt="" />;
+        return <img src={port4} alt="tidbits" />;
       case 'favo-mel':
-        return <img src={port5} alt="" />;
-      case 'kaulike':
-        return <img src={port7} alt="" />;
-      case 'cibele-lorente':
-        return <img src={port8} alt="" />;
-      case 'charles-lapin':
-        return <img src={port9} alt="" />;
-
+        return <img src={port5} alt="favo-mel" />;
       case 'grao-salutte':
-        return <img src={port6} alt="" />;
+        return <img src={port6} alt="grao-salutte" />;
+      case 'kaulike':
+        return <img src={port7} alt="kaulike" />;
+      case 'cibele-lorente':
+        return <img src={port8} alt="cibele-lorente" />;
+      case 'charles-lapin':
+        return <img src={port9} alt="charles-lapin" />;
+      case 'vitoria-tome':
+        return <img src={port10} alt="vitoria-tome" />;
+      case 'natalia-regia':
+        return <img src={port11} alt="natalia-regia" />;
+      case 'vitor-harudo':
+        return <img src={port12} alt="vitor-harudo" />;
       default:
         break;
     }
@@ -123,6 +131,27 @@ const FoodMenu: React.FC = () => {
             >
               <div />
               <p>Grão Salutte</p>
+            </TopicContainer>
+            <TopicContainer
+              selected={selectedItem === 'vitoria-tome'}
+              onClick={() => handleSelectItem('vitoria-tome')}
+            >
+              <div />
+              <p>Vitoria Tome</p>
+            </TopicContainer>
+            <TopicContainer
+              selected={selectedItem === 'natalia-regia'}
+              onClick={() => handleSelectItem('natalia-regia')}
+            >
+              <div />
+              <p>Natalia Regia</p>
+            </TopicContainer>
+            <TopicContainer
+              selected={selectedItem === 'vitor-harudo'}
+              onClick={() => handleSelectItem('vitor-harudo')}
+            >
+              <div />
+              <p>Vitor Harudo</p>
             </TopicContainer>
           </HorizontalRollContainer>
         </SideBar>
