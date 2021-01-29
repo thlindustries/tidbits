@@ -64,7 +64,7 @@ const FoodMenu: React.FC = () => {
   return (
     <Container>
       <p>Navegar</p>
-      <h3>Explore nosso porifólio</h3>
+      <h3>Explore nosso portfólio</h3>
 
       <Menu>
         <SideBar>

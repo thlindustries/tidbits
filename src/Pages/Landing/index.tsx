@@ -79,9 +79,7 @@ const Landing: React.FC = () => {
             <ImgSegundoCard src={logo} alt="Segundo card" />
             <Presentation>
               <Title>Quem somos</Title>
-              <PresDescription>
-                Bem vindo ao restaurante <strong>tidbits</strong>
-              </PresDescription>
+              <PresDescription />
               <PresText>
                 Somos uma agência de marketing que oferece soluções completas
                 para empresas e para criadores de conteúdo. Especialistas em
@@ -115,7 +113,7 @@ const Landing: React.FC = () => {
                 </p>
               </MotCard>
               <MotCard bgColor="#ffeec7">
-                <h1>Acessoria completa </h1>
+                <h1>Assessoria completa </h1>
                 <p>
                   A rede social é lugar de se mostrar e de ganhar dinheiro. Com
                   a assessoria completa te ajudamos a mostrar o seu diferencial
